@@ -1,0 +1,55 @@
+---
+alwaysApply: true
+---
+
+### Project Architecture Rules
+**Runtime:** Bun + TypeScript (NOT Next.js)
+**Directory Structure:** Flat structure. API routes go in `app/` directory, utilities in `lib/`.
+**Server:** We are using Bun.serve() or similar Bun server setup.
+
+### Code Style Rules
+**Naming:** Use `camelCase` for functions/variables, `PascalCase` for classes and types.
+**API Responses:** All responses must use consistent JSON format: `{ success: boolean, data?: any, error?: string }`.
+**Imports:** Use ES modules (`import/export`).
+
+### Security Rules
+**Environment Variables:** All secrets must be stored in `.env` and loaded via `process.env`. Never hardcode them.
+
+### Project Type
+**This is a Bun backend API server, not a Next.js frontend application.**
+
+### Example Server Structure
+```typescript
+// In index.ts - Main server setup
+Bun.serve({
+  port: 3000,
+  routes: {
+    '/api/health': healthHandler,
+  }
+});
+```### Project Architecture Rules
+**Runtime:** Bun + TypeScript (NOT Next.js)
+**Directory Structure:** Flat structure. API routes go in `app/` directory, utilities in `lib/`.
+**Server:** We are using Bun.serve() or similar Bun server setup.
+
+### Code Style Rules
+**Naming:** Use `camelCase` for functions/variables, `PascalCase` for classes and types.
+**API Responses:** All responses must use consistent JSON format: `{ success: boolean, data?: any, error?: string }`.
+**Imports:** Use ES modules (`import/export`).
+
+### Security Rules
+**Environment Variables:** All secrets must be stored in `.env` and loaded via `process.env`. Never hardcode them.
+
+### Project Type
+**This is a Bun backend API server, not a Next.js frontend application.**
+
+### Example Server Structure
+```typescript
+// In index.ts - Main server setup
+Bun.serve({
+  port: 3000,
+  routes: {
+    '/api/health': healthHandler,
+  }
+});
+```
